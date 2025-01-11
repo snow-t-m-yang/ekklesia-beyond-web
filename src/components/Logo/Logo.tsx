@@ -17,8 +17,8 @@ export const Logo = (props: Props) => {
     /* eslint-disable @next/next/no-img-element */
     <img
       alt="Ekklesia Beyond Logo"
-      width={120}
-      height={34}
+      width={110}
+      // height={34}
       loading={loading}
       fetchPriority={priority}
       decoding="async"
