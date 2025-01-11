@@ -23,6 +23,17 @@ const dirname = path.dirname(filename)
 
 export default buildConfig({
   admin: {
+    meta: {
+      title: '彼岸教会网站',
+      description: '',
+      icons: [
+        {
+          rel: 'icon',
+          type: 'image/webp',
+          url: '/beyond-logo.webp',
+        },
+      ],
+    },
     components: {
       // The `BeforeLogin` component renders a message that you see while logging into your admin panel.
       // Feel free to delete this at any time. Simply remove the line below and the import `BeforeLogin` statement on line 15.
