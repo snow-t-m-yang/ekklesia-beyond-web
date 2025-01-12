@@ -1,27 +1,35 @@
-import { Config } from 'payload'
+import { Config } from 'payload';
 import {
+  BlockquoteFeature,
   BoldFeature,
   ItalicFeature,
-  LinkFeature,
-  ParagraphFeature,
+  IndentFeature,
   lexicalEditor,
+  LinkFeature,
+  OrderedListFeature,
+  ParagraphFeature,
   UnderlineFeature,
-} from '@payloadcms/richtext-lexical'
+  UnorderedListFeature,
+} from '@payloadcms/richtext-lexical';
 
 export const defaultLexical: Config['editor'] = lexicalEditor({
   features: () => {
     return [
-      ParagraphFeature(),
-      UnderlineFeature(),
+      BlockquoteFeature(),
       BoldFeature(),
       ItalicFeature(),
+      IndentFeature(),
+      OrderedListFeature(),
+      ParagraphFeature(),
+      UnderlineFeature(),
+      UnorderedListFeature(),
       LinkFeature({
         enabledCollections: ['pages', 'posts'],
         fields: ({ defaultFields }) => {
           const defaultFieldsWithoutUrl = defaultFields.filter((field) => {
-            if ('name' in field && field.name === 'url') return false
-            return true
-          })
+            if ('name' in field && field.name === 'url') return false;
+            return true;
+          });
 
           return [
             ...defaultFieldsWithoutUrl,
@@ -34,9 +42,9 @@ export const defaultLexical: Config['editor'] = lexicalEditor({
               label: ({ t }) => t('fields:enterURL'),
               required: true,
             },
-          ]
+          ];
         },
       }),
-    ]
+    ];
   },
-})
+});
