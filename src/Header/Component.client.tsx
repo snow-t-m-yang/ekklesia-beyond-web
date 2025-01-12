@@ -30,7 +30,7 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
   }, [headerTheme])
 
   return (
-    <header className="bg-white/10 w-full px-3 md:px-7 py-3 fixed backdrop-blur-xl z-20">
+    <header className="bg-white/10 shadow-md w-full px-3 md:px-7 py-3 fixed backdrop-blur-xl z-20">
       <div className="flex justify-between items-center">
         <Link href="/">
           <Logo loading="eager" priority="high" />
