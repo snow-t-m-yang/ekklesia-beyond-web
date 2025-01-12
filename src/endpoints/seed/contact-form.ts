@@ -1,4 +1,4 @@
-import type { Form } from '@/payload-types'
+import type { Form } from '@/payload-types';
 
 export const contactForm: Partial<Form> = {
   confirmationMessage: {
@@ -14,7 +14,7 @@ export const contactForm: Partial<Form> = {
               format: 0,
               mode: 'normal',
               style: '',
-              text: 'The contact form has been submitted successfully.',
+              text: '发送成功，请检查您的邮箱以完成验证。',
               version: 1,
             },
           ],
@@ -108,4 +108,4 @@ export const contactForm: Partial<Form> = {
   submitButtonLabel: 'Submit',
   title: 'Contact Form',
   updatedAt: '2023-01-12T21:47:41.374Z',
-}
+};
