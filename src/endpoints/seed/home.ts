@@ -1,4 +1,4 @@
-import type { RequiredDataFromCollectionSlug } from 'payload'
+import type { RequiredDataFromCollectionSlug } from 'payload';
 
 export const home: RequiredDataFromCollectionSlug<'pages'> = {
   slug: 'home',
@@ -38,7 +38,7 @@ export const home: RequiredDataFromCollectionSlug<'pages'> = {
                 format: 0,
                 mode: 'normal',
                 style: '',
-                text: 'Payload Website Template',
+                text: '彼岸教会',
                 version: 1,
               },
             ],
@@ -661,7 +661,7 @@ export const home: RequiredDataFromCollectionSlug<'pages'> = {
     description: 'An open-source website built with Payload and Next.js.',
     // @ts-ignore
     image: '{{IMAGE_1}}',
-    title: 'Payload Website Template',
+    title: '彼岸教会',
   },
   title: 'Home',
-}
+};

@@ -81,8 +81,8 @@ export const homeStatic: Page = {
     },
   },
   meta: {
-    description: 'An open-source website built with Payload and Next.js.',
-    title: 'Payload Website Template',
+    description: '休斯顿中国城华人教会',
+    title: '彼岸教会',
   },
   title: 'Home',
 }
