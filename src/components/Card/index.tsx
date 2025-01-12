@@ -32,7 +32,7 @@ export const Card: React.FC<{
   return (
     <article
       className={cn(
-        'border border-border rounded-lg overflow-hidden bg-card hover:cursor-pointer',
+        'border border-border rounded-3xl overflow-hidden bg-card hover:cursor-pointer',
         className,
       )}
       ref={card.ref}
@@ -77,7 +77,7 @@ export const Card: React.FC<{
             </h3>
           </div>
         )}
-        {description && <div className="mt-2">{description && <p>{sanitizedDescription}</p>}</div>}
+        {description && <div className="mt-2 line-clamp-3">{description && <p>{sanitizedDescription}</p>}</div>}
       </div>
     </article>
   )
