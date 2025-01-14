@@ -1,25 +1,27 @@
-'use client'
+'use client';
 
-import React from 'react'
+import React from 'react';
 
-import type { Header as HeaderType } from '@/payload-types'
+import type { Header as HeaderType } from '@/payload-types';
+import type { Nav as NavType } from '@/payload-types';
 
-import { CMSLink } from '@/components/Link'
-import Link from 'next/link'
-import { SearchIcon } from 'lucide-react'
+import { CMSLink } from '@/components/Link';
+import Link from 'next/link';
+import { SearchIcon } from 'lucide-react';
 
-export const HeaderNav: React.FC<{ data: HeaderType }> = ({ data }) => {
-  const navItems = data?.navItems || []
+export const HeaderNav: React.FC<{ data: NavType }> = ({ data }) => {
+  const navItems = data?.items || [];
 
   return (
     <nav className="flex gap-3 items-center">
-      {navItems.map(({ link }, i) => {
+      {/* {navItems.links..map(({ link }, i) => {
         return <CMSLink className='text-xl text-black/90' key={i} {...link} appearance="link" />
-      })}
+      })} */}
+
       <Link href="/search">
         <span className="sr-only">Search</span>
         <SearchIcon className="w-16 text-black/90" />
       </Link>
     </nav>
-  )
-}
+  );
+};
