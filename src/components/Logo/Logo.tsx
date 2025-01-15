@@ -17,7 +17,7 @@ export const Logo = (props: Props) => {
   return (
     <div
       className={clsx(
-        'sm:w-[10rem] sm:h-[5rem] xl:w-[12rem] xl:h-[6rem] w-[5rem] h-[3rem] relative transition-all duration-150',
+        'sm:w-[7rem] sm:h-[5rem] xl:w-[10rem] xl:h-[6rem] w-[3rem] h-[2rem] relative transition-all duration-150',
         className,
       )}
     >

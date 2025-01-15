@@ -4,13 +4,14 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 
-import type { Header } from '@/payload-types'
+import type { Nav } from '@/payload-types'
 
 import { Logo } from '@/components/Logo/Logo'
 import { HeaderNav } from './Nav'
+import clsx from 'clsx';
 
 interface HeaderClientProps {
-  data: Header
+  data: Nav
 }
 
 export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
@@ -30,7 +31,7 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
   }, [headerTheme])
 
   return (
-    <header className="bg-white/10 shadow-md w-full px-3 md:px-7 py-3 fixed backdrop-blur-xl z-20">
+    <header className="bg-white/10 shadow-md w-full px-3 md:px-7 py-1 sm:py-3 fixed backdrop-blur-xl z-20">
       <div className="flex justify-between items-center">
         <Link href="/">
           <Logo loading="eager" priority="high" />
