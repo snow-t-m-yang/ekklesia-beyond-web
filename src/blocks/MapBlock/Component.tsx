@@ -2,12 +2,13 @@ import type { MapBlock } from '@/payload-types';
 
 export default async function MapBlock({ place, googleMapEmbedLink }: MapBlock) {
   return (
-    <iframe
-      src={googleMapEmbedLink}
-      width="600"
-      height="450"
-      style={{ border: 0 }}
-      loading="lazy"
-    ></iframe>
+    <section className="container h-96">
+      <iframe
+        src={googleMapEmbedLink}
+        className="rounded-3xl w-full h-full border-0 shadow-xl"
+        allowFullScreen
+        loading="lazy"
+      ></iframe>
+    </section>
   );
 }
