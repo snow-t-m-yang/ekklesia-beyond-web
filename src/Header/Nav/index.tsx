@@ -57,7 +57,10 @@ export const HeaderNav: React.FC<{ data: NavType }> = ({ data }) => {
       {/* TODO: Add sub navigation */}
       <motion.div
         id="mobile-nav"
-        className={cn('fixed h-dvh top-0 left-0 w-full bg-background z-20')}
+        className={cn('fixed block xs:hidden h-dvh top-0 left-0 w-full bg-background z-20')}
+        initial={{
+          y: '-100%',
+        }}
         animate={{
           y: isOpen ? 0 : '-100%',
           opacity: isOpen ? 1 : 0,
