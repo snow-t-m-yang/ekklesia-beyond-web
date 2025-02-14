@@ -10,6 +10,7 @@ import {
   ParagraphFeature,
   UnderlineFeature,
   UnorderedListFeature,
+  EXPERIMENTAL_TableFeature,
 } from '@payloadcms/richtext-lexical';
 
 export const defaultLexical: Config['editor'] = lexicalEditor({
@@ -23,6 +24,7 @@ export const defaultLexical: Config['editor'] = lexicalEditor({
       ParagraphFeature(),
       UnderlineFeature(),
       UnorderedListFeature(),
+      EXPERIMENTAL_TableFeature(),
       LinkFeature({
         enabledCollections: ['pages', 'posts'],
         fields: ({ defaultFields }) => {
