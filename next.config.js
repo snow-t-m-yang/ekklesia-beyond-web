@@ -21,6 +21,10 @@ const nextConfig = {
           protocol: url.protocol.replace(':', ''),
         };
       }),
+      {
+        protocol: 'https',
+        hostname: 'i.ytimg.com',
+      },
     ],
   },
   reactStrictMode: true,
